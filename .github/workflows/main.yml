@@ -32,7 +32,7 @@ jobs:
         application-id: testdata
         result-file: result
         keep-scan-file: true
-        scan-targets: pom.xmla
+        scan-targets: package.json
         debug: false
         # ignore-system-errors: true
         # ignore-scanning-errors: true
