@@ -6,9 +6,6 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  security-events: write
-
 jobs:
   iq-evaluation:
     runs-on: ubuntu-latest
