@@ -18,10 +18,6 @@ jobs:
       id: checkout
       uses: actions/checkout@v4
 
-    - name: print token
-      id: printToken
-      run: echo "${{ github.token }}"
-    
     - name: IQ Evaluate
       id: evaluate
       uses: sonatype/actions/evaluate@v1.0.6-beta
@@ -32,11 +28,8 @@ jobs:
         application-id: testdata
         result-file: result
         keep-scan-file: true
-        scan-targets: package.json
-        debug: false
-        # ignore-system-errors: true
-        # ignore-scanning-errors: true
-        sarif-file: 'result .sarif'
+        scan-targets: pom.xml
+        sarif-file: 'my-file.sarif'
         upload-sarif-file: true
 
     # - name: Setup IQ CLI Action
