@@ -30,9 +30,9 @@ jobs:
       id: run-iq-cli
       uses: sonatype/actions/run-iq-cli@v1.0.6-beta
       with:
+        iq-server-url: https://sonatype.sonatype.app/platform
         username: ${{ secrets.SSA_USERNAME }}
         password: ${{ secrets.SSA_PASSWORD }}
-        iq-server-url: https://sonatype.sonatype.app/platform
         application-id: testdata
         result-file: result
         keep-scan-file: true
