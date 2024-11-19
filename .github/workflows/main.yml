@@ -67,7 +67,7 @@ jobs:
         sarif-file: myfile.sarif
         
     - name: showing resulting file
-      if: ( success() || failure() ) && ${{ steps.run-iq-cli.outputs.sarif-file != '' }} 
+      if: ${{ steps.run-iq-cli.outputs.sarif-file }} && ( success() || failure() )
       run: |
         echo ${{ steps.run-iq-cli.outputs.sarif-file }}
         echo ${{ steps.run-iq-cli.outputs.sarif-file != '' }} 
