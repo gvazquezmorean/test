@@ -39,6 +39,11 @@ jobs:
         # sarif-file: myfile.sarif
         upload-sarif-file: true
 
+    - name: showing resulting file
+      run: |
+        echo result.sarif
+        ls -la 
+    
     # - name: Fetch SBOM
     #   uses: sonatype/actions/fetch-sbom@v1
     #   if: ( success() || failure() ) && steps.evaluate.outputs.scan-id 
