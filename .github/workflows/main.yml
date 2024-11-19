@@ -32,10 +32,10 @@ jobs:
         application-id: testdata
         result-file: result
         keep-scan-file: true
-        scan-targets: pom.xml
+        scan-targets: pom.xmla
         debug: false
-        ignore-system-errors: true
-        ignore-scanning-errors: true
+        # ignore-system-errors: true
+        # ignore-scanning-errors: true
         # sarif-file: myfile.sarif
         upload-sarif-file: true
 
