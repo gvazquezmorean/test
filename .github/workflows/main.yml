@@ -65,9 +65,16 @@ jobs:
         ignore-system-errors: true
         ignore-scanning-errors: true
         sarif-file: myfile.sarif
+
+    - name: showing outputs
+      if: ( success() || failure() )
+      run: |
+        echo ${{ steps.run-iq-cli.outputs.sarif-file }}
+        echo ${{ steps.run-iq-cli.outputs.sarif-file != '' }} 
+        cat ${{ steps.run-iq-cli.outputs.sarif-file }}
         
     - name: showing resulting file
-      if: ${{ steps.run-iq-cli.outputs.sarif-file }} && ( success() || failure() )
+      if: steps.run-iq-cli.outputs.sarif-file && ( success() || failure() )
       run: |
         echo ${{ steps.run-iq-cli.outputs.sarif-file }}
         echo ${{ steps.run-iq-cli.outputs.sarif-file != '' }} 
