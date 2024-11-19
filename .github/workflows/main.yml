@@ -33,7 +33,7 @@ jobs:
         debug: false
         ignore-system-errors: true
         ignore-scanning-errors: true
-        sarif-file: myfile.sarif
+        # sarif-file: myfile.sarif
         upload-sarif-file: true
 
     # - name: Fetch SBOM
