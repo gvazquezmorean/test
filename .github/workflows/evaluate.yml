@@ -17,7 +17,7 @@ jobs:
 
     - name: IQ Evaluate
       id: evaluate
-      uses: sonatype/actions/evaluate@v1
+      uses: sonatype/actions@v1
       with:
         iq-server-url: https://sonatype.sonatype.app/platform
         username: ${{ secrets.SSA_USERNAME }}
@@ -25,9 +25,9 @@ jobs:
         application-id: testdata
         # result-file: result
         # keep-scan-file: true
-        scan-targets: 'pom.xml'
+        scan-targets: 'package.json'
         # sarif-file: 'my-file.sarif'
-        upload-sarif-file: true
+        # upload-sarif-file: true
 
     - name: Fetch SBOM
       uses: sonatype/actions/fetch-sbom@v1
