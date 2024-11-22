@@ -25,7 +25,7 @@ jobs:
         application-id: testdata
         # result-file: result
         # keep-scan-file: true
-        scan-targets: 'package.json'
+        scan-targets: 'package-lock.json'
         # sarif-file: 'my-file.sarif'
         upload-sarif-file: true
 
