@@ -27,7 +27,7 @@ jobs:
         keep-scan-file: true
         scan-targets: '**'
         sarif-file: 'my-file.sarif'
-        upload-sarif-file: true
+        # upload-sarif-file: true
 
     - name: Fetch SBOM
       uses: sonatype/actions/fetch-sbom@v1
