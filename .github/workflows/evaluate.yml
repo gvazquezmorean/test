@@ -23,11 +23,11 @@ jobs:
         username: ${{ secrets.SSA_USERNAME }}
         password: ${{ secrets.SSA_PASSWORD }}
         application-id: testdata
-        result-file: result
-        keep-scan-file: true
-        scan-targets: '**'
-        sarif-file: 'my-file.sarif'
-        # upload-sarif-file: true
+        # result-file: result
+        # keep-scan-file: true
+        scan-targets: 'pom.xml'
+        # sarif-file: 'my-file.sarif'
+        upload-sarif-file: true
 
     - name: Fetch SBOM
       uses: sonatype/actions/fetch-sbom@v1
