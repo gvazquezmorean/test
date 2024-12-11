@@ -9,7 +9,8 @@ on:
 jobs:
   iq-evaluation:
     runs-on: ubuntu-latest
-
+    permissions:
+      security-events: write
     steps:
     - name: Checkout
       id: checkout
