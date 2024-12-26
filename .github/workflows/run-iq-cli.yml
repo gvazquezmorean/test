@@ -25,6 +25,14 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
+    
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+          node-version: '20.x'
+    
+    - name: Install Production Node Dependencies
+      run: npm install --prod
   
     - name: Run IQ CLI Action
       id: run-iq-cli
@@ -36,7 +44,7 @@ jobs:
         application-id: testdata
         result-file: result
         keep-scan-file: true
-        scan-targets: pom.xml
+        scan-targets: package.json
         debug: false
         sarif-file: myfile.sarif
    
